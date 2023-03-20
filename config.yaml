@@ -14,16 +14,16 @@ carpentry: 'incubator'
 title: 'Software citation with the Citation File Format'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: 2023-03-20
+created: '2023-03-20'
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software citation, Citation File Format, software, lesson, The Carpentries'
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'pre-alpha' # FIXME
+life_cycle: 'pre-alpha'
 
-# License of the lesson
+# License of the lesson materials (recommended CC-BY 4.0)
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
