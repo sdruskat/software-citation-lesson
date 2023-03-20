@@ -7,7 +7,7 @@ sets the Learner needs to have installed.
 
 ## Data Sets
 
-Download the [data zip file](data/data.zip) and unzip it to your Desktop
+FIXME: Decide whether to use an example.
 
 ## Software Setup
 
@@ -15,10 +15,10 @@ Download the [data zip file](data/data.zip) and unzip it to your Desktop
 
 ### Details
 
-Setup for different systems can be presented in dropdown menus via a `solution`
-tag. They will join to this discussion block, so you can give a general overview
-of the software used in this lesson here and fill out the individual operating
-systems (and potentially add more, e.g. online setup) in the solutions blocks.
+You will need to edit a text file in the course of this lesson.
+This can be done in the text editor of your choice.
+If you don't have a preferred text editor, or have never used one,
+the system-specific sections below provide some options.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -26,7 +26,7 @@ systems (and potentially add more, e.g. online setup) in the solutions blocks.
 
 ### Windows
 
-Use PuTTY
+[Notepad++](https://notepad-plus-plus.org/)
 
 :::::::::::::::::::::::::
 
