@@ -74,11 +74,11 @@ for considering software a research output in its own right, in the same
 way that academic papers are considered a valid research output.
 
 Software embeds research knowledge. 
-It represents, manipulates and provides complex theoretical constructs
+It represents and manipulates complex theoretical constructs (e.g., heuristics, methods, models)
 that cannot be easily translated into words or equations to include in a paper.[^4]
 In order to fully understand and reproduce computational research results,
-the software (and data) that was used for the research is needed at least as much
-if not more than the paper describing or summarizing the results.
+the software (and data) that was used for the research is needed at least as much,
+if not more, than the paper describing or summarizing the results.
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
