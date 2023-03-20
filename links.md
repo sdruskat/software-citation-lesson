@@ -8,3 +8,8 @@ any links that you are not going to use.
 [rstudio]: https://www.rstudio.com/
 [carpentries-workbench]: https://carpentries.github.io/sandpaper-docs/
 
+<!--
+Lesson-specific links
+-->
+[cff-website]: https://citation-file-format.github.io/
+[cff-schema]: https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md
