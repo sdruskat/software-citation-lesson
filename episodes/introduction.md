@@ -24,7 +24,7 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
-The introductory challenges in this episode can be considered optional.
+The first two challenges in this episode can be considered optional.
 They prepare the argumentative grounds for the necessity of software citation
 by creating an understanding of software as a research output
 that needs to be treated on par with papers.
@@ -91,6 +91,8 @@ way that academic papers are considered a valid research output.
 
 ## Software as a research output
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+
 Research software embeds research knowledge. 
 It represents and manipulates complex theoretical constructs (e.g., heuristics, methods, models)
 that cannot be easily translated into words or equations to include in a traditional paper.[^4]
@@ -116,9 +118,24 @@ During our education as researchers, we usually learn early on how to cite other
 
 It therefore makes sense to apply the method of citation to all forms of research output,
 including research data and software.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Research software often implements complex theoretical constructs.
+This makes software a valid research output that should be treated the same
+as other research outputs.
+
+Furthermore, to be able to fully **understand** these constructs,
+and **reproduce computational research** and its results, 
+we need access to the software it has been conducted with.
+
+This means that research software should be cited when reporting research and results in papers and other publications.
+
+The citation of traditional text publications is a well-established practice,
+but it is less well-known how to apply this practice to software.
 
 ## The principles of software citation
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 Software differs from traditional text outputs in a number of ways:
 
 - Papers usually have a final state: the peer-reviewed, accepted and published version.
@@ -142,9 +159,20 @@ including peer-review, archiving, and assigning persistent identifiers to papers
 In contrast, we have only begun to understand the requirements for a similar publication process for software,
 and there is not yet a universally accepted definition of software publication.[TODO but: HERMES]
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Software differs from traditional text outputs in a number of ways:
+
+- Software is usually developed dynamically, and has no "camera-ready" or final version.
+- Software authors may differ between versions.
+- Different software versions are still considered the same software.
+Iterations on papers are usually considered separate papers.
+- Software is not yet universally considered a citable output.
+- Software does not play the same role as papers in academic evaluation.
+- The process of publishing a paper is well-known, but the requirements and process of software publication are currently less well understood.
 
 Software citation must consider these differences.
-The software citation principles have been defined in a paper by Smith et al. (2016)[^5]:
+The software citation principles have been defined accordingly in a paper by Smith et al. (2016)[^5]:
 
 1. **Importance:** Software should be considered a legitimate and citable research output.
 It should be cited on the same basis as any other research output such as a paper or a book.
@@ -234,7 +262,7 @@ However, in the context of software citation it would be better practice to do t
 
 ## Citation metadata
 
-We have learned that we need some very specific metadata
+We need some very specific metadata
 to correctly cite a software version.
 The main question is, where do we get these metadata from?
 Unlike a paper, software usually does not have a title page that provides all the correct metadata.
@@ -251,11 +279,11 @@ These metadata should be provided together with the source code of the software,
 usually in a publicly accessible source code repository.
 
 While the software citation metadata could simply be included in the documentation,
-for example as a plain text or ${\rm B{\small IB}\TeX}$ reference snippet in the README file,
+for example as a plain text or ${\rm B{\small IB}\TeX}$ reference snippet in a README file,
 this makes it hard or impossible to reliably extract and process the metadata.
 
 Instead, the metadata should be provided in a way that is readable for both humans and machines.
-The [Citation File Format (CFF)](https://citation-file-format.github.io) provides such a way.
+The [Citation File Format (CFF)](https://citation-file-format.github.io) provides a format to do this in a software citation metadata file.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
