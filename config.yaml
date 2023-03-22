@@ -60,6 +60,7 @@ contact: 'cff@sdruskat.net'
 # Order of episodes in your lesson
 episodes: 
 - introduction.md
+- the-citation-file-format-cff.Rmd
 
 # Information for Learners
 learners: 

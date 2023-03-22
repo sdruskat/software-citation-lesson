@@ -1,0 +1,32 @@
+---
+title: 'The Citation File Format (CFF)'
+teaching: 10
+exercises: 2
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- What is the Citation File Format (CFF)?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Learn what the Citation File Format is, and what problems it solves.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Introduction to the Citation File Format
+
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+- The Citation File Format (CFF) is a human- and machine-readable file format for software citation metadata.
+- Valid CFF files are called `CITATION.cff` and contain YAML data.
+- The CFF *schema* defines what fields and values a CFF file can and must have.
+- CFF can provide comprehensive citation metadata for a software (version).
+- CFF can provide metadata for another output that should be cited in addition to the software itself.
+- CFF can provide the references for a software, e.g., its dependencies.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
