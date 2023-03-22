@@ -6,7 +6,7 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- Why should researchers cite software?
+- Why should software be cited?
 - How should software be cited?
 - What do researchers need to cite software correctly?
 
@@ -95,7 +95,7 @@ Research software embeds research knowledge.
 It represents and manipulates complex theoretical constructs (e.g., heuristics, methods, models)
 that cannot be easily translated into words or equations to include in a traditional paper.[^4]
 
-In order to fully understand and reproduce computational research results,
+In order to fully understand and *reproduce* computational research results,
 the software (and data) that was used for the research is needed at least as much,
 if not more, than the paper describing or summarizing the results.
 
@@ -126,9 +126,8 @@ Software is often developed dynamically, and many versions exist, of which some 
 labeled as stable snapshot, and promoted to a release version.
 - Each software version may have a different set of authors and contributors, 
 whereas published papers have a fixed set of authors and contributors.
-- An iteration on a paper is considered a new, separate papers.
+- An iteration on a paper is considered a new, separate paper.
 An iteration on a software version is still considered the same software.
-
 - While papers, as peer-reviewed text publications, are firmly established as citable outputs,
 the status of research software as citable output is still not universally accepted.
 - Paper publications and citations to papers have long served as a means of evaluating research,
@@ -145,25 +144,118 @@ and there is not yet a universally accepted definition of software publication.[
 
 
 Software citation must consider these differences.
+The software citation principles have been defined in a paper by Smith et al. (2016)[^5]:
+
+1. **Importance:** Software should be considered a legitimate and citable research output.
+It should be cited on the same basis as any other research output such as a paper or a book.
+2. **Credit and attribution:** Software citations should facilitate giving scholarly credit and normative, 
+legal attribution to all software authors.
+3. **Unique identification:** Software citations should include a method for machine-actionable unique identification of the software.
+4. **Persistence:** Unique identifiers and metadata describing the software should persist - even beyond the lifespan of the software they describe.
+5. **Accessibility:** Software citations should make it possible to access the software and its associated metadata and resources (documentation, data, etc.).
+6. **Specificity:** Software citations should allow identification of and access to the specific version of the software that was used.
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Challenge 3: How to cite software correctly
+
+Which of the following software citations adhere to the software citation principles?
+
+1. [...] *To analyze our data, we used Microsoft Excel (Office 2019, Microsoft, Redmond, WA, USA). The analysis shows* [...]
+
+---
+
+2. [...] *To analyze our data, we used Pandas 1.5.3 (McKinney 2010). The analysis shows* [...]<br/>
+<br/>
+**References**<br/>
+W. McKinney, "Data Structures for Statistical Computing in Python," Proceedings of the 9th Python in Science Conference, pp. 56–61, 2010, doi: 10.25080/Majora-92bf1922-00a.
+
+---
+
+3. [...] *To analyze our data, we used Pandas (The pandas development team 2023). The analysis shows* [...]<br/>
+<br/>
+**References**<br/>
+The pandas development team. (2023). pandas-dev/pandas: Pandas (v1.5.3). Zenodo. https://doi.org/10.5281/zenodo.7549438.
+
+:::::::::::::::::::::::: solution 
+
+**Example 1.** This is not a software citation at all, but rather an in-text *mention* of the software, 
+using a format similar to what is commonly used to specify a scientific instrument that was used for the research.
+
+Also, although some version identification was provided ("Office 2019"), the information is not specific enough to
+identify the exact software version that was used. This mention also neither provides a unique identifier nor
+makes the exact software version accessible.
+
+A better (but not optimal) way of software citation would have looked like this:
+
+<div style="padding-left:5%">
+[...] *To analyze our data, we used Microsoft Excel (Microsoft 2019). The analysis shows* [...]<br/>
+<br/>
+**References**<br/>
+Microsoft (2019), Microsoft Excel (version 1808 (Build 10396.20023 Klick-und-Los)). Redmond, WA, USA. https://learn.microsoft.com/de-de/officeupdates/update-history-office-2019.
+</div>
+
+Note that it is hard to link to an exact version of Excel.
+This makes it nearly impossible to reliably reproduce the analysis that is reported in this paper.
+Perhaps Excel is not the optional choice for data analysis?
+
+**Violated software citation principles:** Importance, Unique identification, Accessibility, Specificity
+
+---
+
+**Example 2.** Although the text mentions a specific version, and the respective reference lists the author and provides a unique identifier (a Digital Object Identifier, or DOI),
+the reference itself is to a paper describing the software, not the software itself.
+
+A better way of software citation would have looked like this:
+
+<div style="padding-left:5%">
+[...] *To analyze our data, we used Pandas 1.5.3 (McKinney 2010). The analysis shows* [...]<br/>
+<br/>
+**References**<br/>
+W. McKinney, "Data Structures for Statistical Computing in Python," Proceedings of the 9th Python in Science Conference, pp. 56–61, 2010, doi: 10.25080/Majora-92bf1922-00a.
+</div>
+
+**Violated software citation principles:** Importance
+
+---
+
+**Example 3.** The example uses the information provided by the software authors themselves (see [this archived snapshot of the pandas citation page](http://web.archive.org/web/20230322145850/https://pandas.pydata.org/about/citing.html)). 
+Although this example does not have the same issues as the previous ones, the author information is problematic,
+as it does not facilitate giving credit and attribution to the individual authors directly.
+Tracking individual authors for each software version can be complicated and tedious,
+and there is not yet a good general definition of what constitutes software authorship to begin with.
+However, in the context of software citation it would be better practice to do the work of defining individual authors for each software version.
 
 
-## Figures
+**Violated software citation principles:** Credit and attribution
 
-You can use standard markdown for static figures with the following syntax:
+:::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::
 
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
+## Citation metadata
 
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
+We have learned that we need some very specific metadata
+to correctly cite a software version.
+The main question is, where do we get these metadata from?
+Unlike a paper, software usually does not have a title page that provides all the correct metadata.
 
-## Math
+The answer to this question is that, just like with a paper, the software authors must provide the metadata themselves.
+These must minimally include:
 
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
+- A list of the software authors,
+- the name of the software,
+- the version of the software,
+- a method to access the software version to be cited, ideally through a persistent unique identifier such as a DOI.
 
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
+These metadata should be provided together with the source code of the software,
+usually in a publicly accessible source code repository.
 
-Cool, right?
+While the software citation metadata could simply be included in the documentation,
+for example as a plain text or ${\rm B{\small IB}\TeX}$ reference snippet in the README file,
+this makes it hard or impossible to reliably extract and process the metadata.
+
+Instead, the metadata should be provided in a way that is readable for both humans and machines.
+The [Citation File Format (CFF)](https://citation-file-format.github.io) provides such a way.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
@@ -179,3 +271,4 @@ Cool, right?
 [^2]: European Commission, Directorate-General for Research and Innovation, Osimo, D., Switters, J., Recognising the importance of software in research: Research Software Engineers (RSEs), a UK example, Publications Office, 2019, https://data.europa.eu/doi/10.2777/787013.
 [^3]: Deutsche Forschungsgemeinschaft. (2020). The Digital Turn in the Sciences and Humanities. Zenodo. https://doi.org/10.5281/zenodo.4191345.
 [^4]: Jay C, Haines R, Katz DS et al. The challenges of theory-software translation [version 1; peer review: 2 approved, 1 approved with reservations]. F1000Research 2020, 9:1192 (https://doi.org/10.12688/f1000research.25561.1).
+[^5]: Smith AM, Katz DS, Niemeyer KE, FORCE11 Software Citation Working Group. 2016. Software citation principles. PeerJ Computer Science 2:e86 https://doi.org/10.7717/peerj-cs.86 
