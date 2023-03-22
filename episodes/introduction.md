@@ -103,8 +103,6 @@ This makes software a valid research output in its own right.
 Consequently, research software should be treated the same as other outputs
 in the research lifecycle.
 
-## Software citation
-
 For us as researchers, this means that when we report our research and results 
 (for example in a paper),
 we must provide information about the research software that we have used,
@@ -119,7 +117,34 @@ During our education as researchers, we usually learn early on how to cite other
 It therefore makes sense to apply the method of citation to all forms of research output,
 including research data and software.
 
+## The principles of software citation
 
+Software differs from traditional text outputs in a number of ways:
+
+- Papers usually have a final state: the peer-reviewed, accepted and published version.
+Software is often developed dynamically, and many versions exist, of which some may be
+labeled as stable snapshot, and promoted to a release version.
+- Each software version may have a different set of authors and contributors, 
+whereas published papers have a fixed set of authors and contributors.
+- An iteration on a paper is considered a new, separate papers.
+An iteration on a software version is still considered the same software.
+
+- While papers, as peer-reviewed text publications, are firmly established as citable outputs,
+the status of research software as citable output is still not universally accepted.
+- Paper publications and citations to papers have long served as a means of evaluating research,
+and scholarly credit is currently still based mostly on paper-related metrics. Normative, legal
+attribution to paper contributors is solved through established guidelines for authorship, e.g.,
+by academic institutions, funders [TODO cite DFG] or domain-specific committees such as the 
+International Committee of Medical Journal Editors [TODO cite https://www.icmje.org/recommendations/browse/roles-and-responsibilities/defining-the-role-of-authors-and-contributors.html].
+Currently, there is no well-established practice of evaluation based on research software,
+nor universally accepted norms for scholarly credit and attribution.[TODO but: Helholtz guidelines]
+- The process of paper publication is well-defined and widely followed,
+including peer-review, archiving, and assigning persistent identifiers to papers.
+In contrast, we have only begun to understand the requirements for a similar publication process for software,
+and there is not yet a universally accepted definition of software publication.[TODO but: HERMES]
+
+
+Software citation must consider these differences.
 
 
 ## Figures
