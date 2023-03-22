@@ -1,7 +1,7 @@
 ---
 title: "Software citation"
 teaching: 10
-exercises: 2
+exercises: 3
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -294,7 +294,6 @@ The [Citation File Format (CFF)](https://citation-file-format.github.io) provide
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-[r-markdown]: https://rmarkdown.rstudio.com/
 [^1]: Simon Hettrick. (2018). softwaresaved/software_in_research_survey_2014: Software in research survey (1.0). Zenodo. https://doi.org/10.5281/zenodo.1183562.
 [^2]: European Commission, Directorate-General for Research and Innovation, Osimo, D., Switters, J., Recognising the importance of software in research: Research Software Engineers (RSEs), a UK example, Publications Office, 2019, https://data.europa.eu/doi/10.2777/787013.
 [^3]: Deutsche Forschungsgemeinschaft. (2020). The Digital Turn in the Sciences and Humanities. Zenodo. https://doi.org/10.5281/zenodo.4191345.
