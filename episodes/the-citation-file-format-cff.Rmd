@@ -19,6 +19,86 @@ exercises: 2
 ## Introduction to the Citation File Format
 
 
+The [Citation File Format (CFF)](https://citation-file-format.github.io/) is a format for files that contain citation metadata for software.
+It has been developed to make it easier for software authors to provide the complete and correct set of citation metadata for their software projects.
+
+CFF files are called `CITATION.cff`.
+They are meant to live together with the source code of the software, usually in a source code repository.
+`CITATION.cff` files can also be shipped together with the software, for example when software is distributed in downloadable archives.
+
+One of the main aims of CFF is to make these metadata files accessible for both humans and machines.
+To achieve this, CFF files are written in a data serialization markup language called YAML.
+YAML is often used for software configuration files, and therefore there is a chance that software developers already know it.
+
+The contents of a simple CFF file are shown below, but CFF can do more than this, which you will learn about in the following sections.
+
+```yaml
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Druskat
+    given-names: Stephan
+    orcid: https://orcid.org/1234-5678-9101-1121
+title: "My Research Software"
+version: 2.0.4
+doi: 10.5281/zenodo.1234
+date-released: 2021-08-11
+```
+
+## Very brief introduction to YAML
+
+One of the features of YAML is that it uses very few actual markup symbols.
+This makes it easier to read than languages that make extensive use of brackets to structure data, such as JSON.
+
+YAML uses so called "block collections", where each entry begins on its own line, and the scope is defined using indentation.
+
+For data structures, YAML most importantly defines collections:
+
+- *mappings*, where data is provided as key-value pairs such as `foo: bar`, and
+- *sequences*, where each entry starts with a dash and a whitespace, followed by the data value, as in `- Entry 1`.
+
+Mappings and sequences can be mixed as well.
+This means that you can map keys to sequences, as in the following example. We could call those "named lists".
+
+```yaml
+colors:
+  - green
+  - white
+  - orange
+  - blue
+```
+
+You can also have sequences of mappings, as in the following example, where we could call each entry an "anonymous object".
+
+```yaml
+-
+  age: 23
+  name: Kim
+-
+  age: 42
+  name: Alex
+```
+
+Values in YAML have different data types, similar to programming languages.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+
+In the YAML specification, this is worded less intuitively:
+
+> A YAML node represents a single native data structure. Such nodes have content of one of three kinds: scalar, sequence or mapping. 
+> In addition, each node has a tag which serves to restrict the set of possible values the content can have.
+
+This episode uses "mappings" and "sequences", but not "scalars".
+Should learners ask about this, either refer them to the [YAML specifications](https://yaml.org/spec/) themselves,
+or give them the definition of "scalar", which for YAML 1.2.2 is:
+
+> The content of a scalar node is an opaque datum that can be presented as a series of zero or more Unicode characters.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+The Citation File Format uses a small subset of what the YAML specifications provide:
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - The Citation File Format (CFF) is a human- and machine-readable file format for software citation metadata.
