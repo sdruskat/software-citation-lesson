@@ -96,14 +96,23 @@ or give them the definition of "scalar", which for YAML 1.2.2 is:
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+The Citation File Format uses both mappings and sequences, and mainly three data types:
 
-The Citation File Format uses a small subset of what the YAML specifications provide:
+- **strings**, written in YAML as `"string value"` (optionally without the double quotes, if the string contains no special characters)
+- **numbers** - either integers or floats - written in YAML without quotes as `42` or `0.42`
+- **integers**, written in YAML without quotes as `42`
+
+The Citation File Format project also provides a 
+[*schema* (as JSON Schema)](https://github.com/citation-file-format/citation-file-format/blob/main/schema.json) 
+that can be used to check the validity of `CITATION.cff` files.
+
+### Required keys
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - The Citation File Format (CFF) is a human- and machine-readable file format for software citation metadata.
 - Valid CFF files are called `CITATION.cff` and contain YAML data.
-- The CFF *schema* defines what fields and values a CFF file can and must have.
+- The CFF *schema* defines what keys and values a CFF file can and must have.
 - CFF can provide comprehensive citation metadata for a software (version).
 - CFF can provide metadata for another output that should be cited in addition to the software itself.
 - CFF can provide the references for a software, e.g., its dependencies.
