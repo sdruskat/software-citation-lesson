@@ -247,7 +247,7 @@ W. McKinney, "Data Structures for Statistical Computing in Python," Proceedings 
 
 ---
 
-**Example 3.** The example uses the information provided by the software authors themselves (see [this archived snapshot of the pandas citation page](http://web.archive.org/web/20230322145850/https://pandas.pydata.org/about/citing.html)). 
+**Example 3.** The example uses the information provided by the software authors themselves (see [this archived snapshot of the pandas citation page](https://web.archive.org/web/20230322145850/https://pandas.pydata.org/about/citing.html)). 
 Although this example does not have the same issues as the previous ones, the author information is problematic,
 as it does not facilitate giving credit and attribution to the individual authors directly.
 Tracking individual authors for each software version can be complicated and tedious,
