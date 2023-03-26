@@ -267,6 +267,38 @@ to correctly cite a software version.
 The main question is, where do we get these metadata from?
 Unlike a paper, software usually does not have a title page that provides all the correct metadata.
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Citing an example software
+
+Imagine that you are writing a paper about time spent in space as a comorbidity factor in astronauts.
+In search of software that you can use to analyse your data, you have found
+an open source Python script.
+You can successfully reuse the software to analyse your data, and want to cite it
+in your paper.
+
+Based on the contents of the GitHub repository you cloned the script from,
+how would you cite it according to the software citation principles?
+You can find the repository at https://github.com/sdruskat/astronaut-analysis.
+
+:::::::::::::::: solution
+
+It is really hard to cite the script according to the software citation principles, as we cannot be sure about the correct citation metadata:
+
+- **What is the name of the software, seeing that the repository contains data, software *and* results?** Is it "Astronaut Analysis", is it "Astronaut Analysis Script", or is it "astronaut-analysis.py"?
+- **Who are the authors of the software?** There is one contributor called "schlauch" in the commit history, but what is their full name? And what about the owner of the repository, "sdruskat"?
+- **What is the version of the software that has been used for the analysis?** There are no tags and no releases on the GitHub page.
+- **What is the persistent identifier of the software?** There is no hint that this software even has a persistent identifier.
+
+The best we can do with regard to a maximally correct citation of the script is something like this:
+
+> The Astronaut Analysis developers (2021): Astronaut Analysis code (commit 66bc52d49262f0b9034ddc690df6d1cdfff9e7b8). https://github.com/sdruskat/astronaut-analysis/commit/66bc52d49262f0b9034ddc690df6d1cdfff9e7b8.
+
+The "publication date" is the date of the last commit to the GitHub repository, and we can extract the full commit identifier from the URL of the last commit.
+
+:::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
+
 The answer to this question is that, just like with a paper, the software authors must provide the metadata themselves.
 These must minimally include:
 
