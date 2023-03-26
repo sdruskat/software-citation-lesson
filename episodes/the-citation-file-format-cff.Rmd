@@ -96,6 +96,8 @@ or give them the definition of "scalar", which for YAML 1.2.2 is:
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+## YAML in the Citation File Format
+
 The Citation File Format uses both mappings and sequences, and mainly three data types:
 
 - **strings**, written in YAML as `"string value"` (optionally without the double quotes, if the string contains no special characters)
@@ -105,8 +107,53 @@ The Citation File Format uses both mappings and sequences, and mainly three data
 The Citation File Format project also provides a 
 [*schema* (as JSON Schema)](https://github.com/citation-file-format/citation-file-format/blob/main/schema.json) 
 that can be used to check the validity of `CITATION.cff` files.
+The schema defines what keys are required, and what values are valid for which keys.
+Amongst other things, the schema defines *enums* (enumerated types) and *regular expressions* for definitions.
 
-### Required keys
+::::::::::::::::::::::: callout
+
+## Citation File Format schema guide
+
+The [Guide to the Citation File Format schema](https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md)
+provides detailed information for each key and what values it can take.
+It is the definitive source of information regarding the Citation File Format.
+
+::::::::::::::::::::::::::::::::
+
+## Required keys
+
+`CITATION.cff` files must contain at least the following four key-value pairs:
+
+- **`cff-version`** followed by the version string for a published version of the Citation File Format itself.  
+This key tells the user what keys and values the file should contain based on the respective schema, and to identify the file as a CFF file, together with the file name.
+- **`message`** followed by a message to human readers, to tell them what the file represents.  
+This key tells the user what they are looking at, and to help them make proper use of the file data.
+- **`title`** followed by the name of the software.  
+This key tells the user what name the software should be cited under. This is the equivalent of the title of a paper.
+- **`authors`** followed by a sequence of at least one software author.  
+This key tells the user who should be cited as authors of the software.
+
+A minimal valid `CITATION.cff` file could look like this:
+
+```yaml
+cff-version: "1.2.0"
+message: "If you use this software, cite it using these metadata."
+title: "Astronaut Analysis"
+authors:
+  - family-names: "Druskat"
+    given-names: "Stephan"
+  - name: "The Astronaut Analysis Team"
+```
+
+Note that there are two types of authors in the example: 
+
+- **person authors** have at least one or more given names (e.g. "first names" in some cultures) and one or more "family names".
+The Citation File Format aims to implement a culturally neutral model for personal names, 
+but formalizing names in a machine-readable schema is hard.
+You can read about how name keys are intended to be used in the [CFF schema guide for persons](https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md#definitionsperson).
+- **entity authors** represent groups of people or institutions or similar that can act as software authors.
+Entity authors can be used as a sensible fallback mechanism for cases where the real authors cannot be determined.
+We have seen this in the first attempt to create a citation for Astronaut Analysis, where the single author was "The Astronaut Analysis developers".
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
