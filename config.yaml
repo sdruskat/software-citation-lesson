@@ -61,6 +61,10 @@ contact: 'cff@sdruskat.net'
 episodes: 
 - introduction.md
 - the-citation-file-format-cff.Rmd
+- publishing-your-software.Rmd
+- software-references.Rmd
+- outlook-automating-software-publication.Rmd
+- bonus-getting-traditional-credit-for-your-software.Rmd
 
 # Information for Learners
 learners: 

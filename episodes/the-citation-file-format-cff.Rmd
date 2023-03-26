@@ -155,14 +155,88 @@ You can read about how name keys are intended to be used in the [CFF schema guid
 Entity authors can be used as a sensible fallback mechanism for cases where the real authors cannot be determined.
 We have seen this in the first attempt to create a citation for Astronaut Analysis, where the single author was "The Astronaut Analysis developers".
 
+## What the Citation File Format can do
+
+CFF has been developed with the software citation principles in mind.
+It provides all the keys you need to provide citation metadata for your software in a way that fulfills the principles.
+
+The following example shows a more typical CFF file that provides all the necessary information 
+to adhere to the software citation principles.
+
+```yaml
+cff-version: "1.2.0"
+message: "If you use this software, please cite it using these metadata."
+title: "My Research Software"
+abstract: "This is my awesome research software. It does many things."
+authors:
+  - family-names: Druskat
+    given-names: Stephan
+    orcid: "https://orcid.org/1234-5678-9101-1121"
+  - name: "The Research Software project"
+version: "0.11.2"
+date-released: "2021-07-18"
+identifiers:
+  - description: "This is the collection of archived snapshots of all versions of My Research Software"
+    type: "doi"
+    value: "10.5281/zenodo.123456"
+  - description: "This is the archived snapshot of version 0.11.2 of My Research Software"
+    type: "doi"
+    value: "10.5281/zenodo.123457"
+license: "Apache-2.0"
+repository-code: "https://github.com/citation-file-format/my-research-software"
+```
+
+Remember the minimal metadata that software authors should provide to make the software properly citable?
+
+- A list of the software authors,
+- the name of the software,
+- the version of the software,
+- a method to access the software version to be cited, ideally through a persistent unique identifier such as a DOI.
+
+The example above includes all this information, and more. The `abstract` key gives a brief summary of what the software does.
+The `license` key tells us something about the conditions the software can be used under. 
+The `date-released` field gives us a date that we can use in our citation.
+The `repository-code` field gives us a link to the place where the software has been (and perhaps still is) developed.
+And we also get some more information about the first listed author.
+
+There is more: with CFF you can, for example, provide a list of references for your software under the `references` key.
+You can also ask people to cite something else (for example a paper) in addition to citing the software itself, by providing
+a citation under the `preferred-citation` key.
+
+CFF defines more keys than the ones above, but don't worry, you will not need to learn keys by heart.
+
+## Creating a `CITATION.cff` file
+
+1. Log in to GitHub with your personal account
+2. Fork the repository at https://github.com/sdruskat/astronaut-analysis by clicking the "Fork" button on the repository page
+3. (Optional) Choose the fork target account or organization
+4. Create a `CITATION.cff` file for your forked repository:
+
+- You don't have to do this manually. You can use *cffinit*: https://bit.ly/cffinit
+- In a new browser tab, start to create a file called `CITATION.cff` from the GitHub UI in the repository root
+- Copy and paste the final file you have created with cffinit into the editor window in github
+- Commit the file
+- What are the change in the GitHub UI?
+
+- Users can read the file
+- Users have the widget
+
+- Challenge: What is missing for a citation based on the software citation principles?
+
+:::: instructor
+
+DOI!
+
+::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - The Citation File Format (CFF) is a human- and machine-readable file format for software citation metadata.
 - Valid CFF files are called `CITATION.cff` and contain YAML data.
 - The CFF *schema* defines what keys and values a CFF file can and must have.
 - CFF can provide comprehensive citation metadata for a software (version).
-- CFF can provide metadata for another output that should be cited in addition to the software itself.
 - CFF can provide the references for a software, e.g., its dependencies.
+- CFF can provide metadata for another output that should be cited in addition to the software itself.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

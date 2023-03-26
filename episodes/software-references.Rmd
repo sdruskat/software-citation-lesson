@@ -1,0 +1,45 @@
+---
+title: 'Software references'
+teaching: 10
+exercises: 2
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- How do you write a lesson using R Markdown and `{sandpaper}`?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Explain how to use markdown with the new lesson template
+- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Software references
+
+Software as a valid research output should be treated the same way as other output, for example papers.
+This also means that software should cite its own references, in analogy to the list of references in a paper.
+Software citing other works may sound unusual at first, but a lot of software already does it in a way:
+software often reuses other software to implement functionality, its so-called *dependencies*.
+And often, these dependencies must be defined in the build instructions, for example in manifest files such as
+`pyproject.toml`, `requirements.txt`, `pom.xml`, `cargo.toml` or similar.
+In the context of citation, the dependencies that software uses *directly* are its references.
+
+In CFF files, you can provide information about these references as a list (a YAML sequence) under the key `references`.
+
+> TODO: Challenge:  
+> 1. add the two references for astronaut analysis using the schema guide, or the GitHub guide. Make a best effort!  
+> 2. Use cffinit to validate your CFF file with the references.  
+> 3. Add the updated CITATION.cff to your repo
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+- Use `.md` files for episodes when you want static content
+- Use `.Rmd` files for episodes when you need to generate output
+- Run `sandpaper::check_lesson()` to identify any issues with your lesson
+- Run `sandpaper::build_lesson()` to preview your lesson locally
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+

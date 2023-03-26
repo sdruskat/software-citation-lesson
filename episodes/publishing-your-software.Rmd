@@ -1,0 +1,46 @@
+---
+title: 'Publishing your software with a DOI'
+teaching: 10
+exercises: 2
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- How can you publish your software with the correct and complete citation metadata you provide in your `CITATION.cff` file?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Learn how to activate the GitHub-Zenodo integration
+- Automatically publish your software to Zenodo when creating a release on GitHub
+- Provide the concept DOI for your software in your `CITATION.cff` file
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+- Log in to the Zenodo Sandbox at https://sandbox.zenodo.org/
+- Activate the bridge for your fork of astronaut analysis
+- Create a tag `pre-release-test` on the commit BEFORE the one that has added the CITATION.cff file
+- Create a release for this tag
+- Check publication on Zenodo Sandbox
+- Create a tag `release-test` on the commit that has added the CITATION.cff file
+- Create a release for this tag
+- Check publication on Zenodo Sandbox
+
+- Different metadata! Better metadata! Under the same concept DOI!
+
+- Add concept DOI to identifiers in CITATION.cff
+- Push CITATION.cff
+- Add Zenodo badge for concept DOI to README
+- Push README
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+- Use `.md` files for episodes when you want static content
+- Use `.Rmd` files for episodes when you need to generate output
+- Run `sandpaper::check_lesson()` to identify any issues with your lesson
+- Run `sandpaper::build_lesson()` to preview your lesson locally
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
